@@ -1,0 +1,39 @@
+.settings-list {
+  padding-bottom: 10px;
+  border-bottom: var(--main-border);
+}
+
+.settings__setting {
+  padding: 15px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings__setting i {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.settings__setting:nth-child(2) i {
+  margin-right: 26px;
+}
+
+.settings__setting:nth-child(3) i {
+  margin-right: 23px;
+}
+
+.setting__setting-column:last-child span {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.settings-sec-list .settings__setting:first-child i {
+  margin-right: 27px;
+}
+
+.settings-sec-list .settings__setting:nth-child(3) i {
+  margin-right: 20px;
+}

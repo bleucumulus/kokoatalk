@@ -1,0 +1,20 @@
+.chats__time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chats-component__time {
+  margin-bottom: 5px;
+  margin-top: -1px;
+}
+
+.chats__notification {
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.chats-screen .user-component {
+  margin-bottom: 20px;
+}

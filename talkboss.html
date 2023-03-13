@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Talk w/boss - kokoatalk</title>
+  </head>
+  <body id="talk-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- To Do : Wifi Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>11:04</span>
+      </div>
+      <div class="status-bar__column">
+        <span>97%</span>
+        <!-- Battery Icon -->
+        <i class="fas fa-battery-full"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="javascript:history.back();">
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Boss</h1>
+      </div>
+      <div class="alt-header__column">
+        <i class="fas fa-search fa-1x"></i>
+        <i class="fas fa-bars fa-1x"></i>
+      </div>
+    </header>
+
+    <main class="main-screen main-talk">
+      <div class="talk__timestamp">Monday, 6 March, 2023</div>
+
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">where r u boss?</span>
+            <span class="message__time">9:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="img/IMG_0758.JPG" />
+        <div class="message-row__content">
+          <span class="message__author">Boss</span>
+          <div class="message__info">
+            <span class="message__bubble">Sorry... i wake up now</span>
+            <span class="message__time">10:47</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- message-row--own는 modifier 임-->
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="message" />
+        <i class="far fa-smile"></i>
+        <button>
+          <i class="fas fa-arrow-circle-up"></i>
+        </button>
+      </div>
+    </form>
+    <div id="no-mobile">
+      <span>Please use the mobile</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

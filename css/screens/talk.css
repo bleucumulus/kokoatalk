@@ -1,0 +1,238 @@
+#talk-screen {
+  background-color: #abc1d1;
+  height: 300vh;
+}
+
+#talk-screen .alt-header__column:last-child i:last-child {
+  margin-left: 15px;
+}
+
+#talk-screen .status-bar,
+#talk-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+
+  top: 0;
+  background-color: #abc1d1;
+}
+
+#talk-screen .status-bar {
+  z-index: 2;
+  margin-bottom: 0px;
+}
+
+#talk-screen .alt-header {
+  z-index: 1;
+  padding: 0px 10px;
+  height: 50px;
+  margin-top: 26px;
+  padding-top: 25px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.main-talk {
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s linear;
+}
+
+.talk__timestamp {
+  background-color: #92a4b2;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+@keyframes bubbleFadeIn {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+  animation: bubbleFadeIn 0.4s linear;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: whitesmoke;
+  padding: 11px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 11px;
+  padding-bottom: 3px;
+}
+
+@keyframes myBubbleFadeIn {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.message-row--own {
+  justify-content: flex-end;
+  animation: myBubbleFadeIn 0.8s linear forwards;
+}
+
+/*  순서 바꾸는 첫번째 방법
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+  order: 1;
+} */
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+  width: 5%;
+  margin-right: 15px;
+  opacity: 0.6;
+}
+
+.reply .reply__column:last-child {
+  width: 95%;
+  position: relative;
+}
+
+.reply input {
+  width: 100%;
+  height: 20px;
+  border: var(--main-border);
+  border-radius: 20px;
+  padding-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+.reply__column:last-child > i {
+  right: 35px;
+}
+
+.reply__column:last-child button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 18px;
+  top: 1.5px;
+  color: var(--yellow);
+}
+
+.reply__column:last-child button:focus,
+.reply__column:last-child button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+  transition: opacity 0.1s ease-in;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 90vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}
