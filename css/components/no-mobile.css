@@ -15,7 +15,7 @@
   */
 }
 
-@media screen and (min-width: 645px) {
+@media screen and (min-width: 540px) {
   #no-mobile {
     /*
     display: none;
